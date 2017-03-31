@@ -15,6 +15,29 @@ html, body, #container {
   width: 100%;
   background-color: #fe80fe;
 }
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #fff;
+    font-size: 100px;
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    text-shadow: 0 0 200px #fff;
+    font-size: 300px;
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    text-shadow: 0 0 10px #fff;
+    font-size: 100px;
+    transform: rotate(-30deg);
+  }
+}
 #canv {
   position: absolute;
   <!--width: 100%;-->
@@ -24,10 +47,12 @@ html, body, #container {
   font-size: 300px;
   color: #01cdfe;
   position: relative;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
   -webkit-text-stroke: 4px #000;
-  text-shadow: 0 0 40px #fff;
+  animation-name: glow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   text-align: center;
   font-weight: bold;
   font-family: "Comic Sans MS", "Helvetica", cursive, sans-serif;
