@@ -1,19 +1,21 @@
 var TREVOR = 'nope';
+var font='100px Comic Sans MS, cursive, sans-serif';
 
 function draw() {
-    console.log("running draw");
-    var canvas = $('#canv');
+  var canvas = $('#canv').get(0);
 
-    if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
-        ctx.fillStyle='rgb(200,0,0)';
-        ctx.fillRect(10,10,50,50);
-    }
-    else {
-        console.log("Canvas didn't work");
-        var div = $('<div></div>')
-                      .addClass('bigtext')
-                      .text(TREVOR);
-        $('#container').append(div)
-    }
+  //TODO this
+  if (false) {
+    //var ctx = canvas.getContext('2d');
+    //$('#canv').height($('#container').height());
+    //$('#canv').width($('#container').width());
+    //ctx.font = font;
+    //ctx.fillText(TREVOR, 0, 150);
+  }
+  else {
+    var div = $('<div></div>')
+                .addClass('bigtext')
+                .text(TREVOR);
+    $('#container').append(div)
+  }
 }
