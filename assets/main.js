@@ -2,6 +2,9 @@ var TREVOR = 'nope';
 var font='100px Comic Sans MS, cursive, sans-serif';
 
 function draw() {
+  particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
   var canvas = $('#canv').get(0);
 
   //TODO this

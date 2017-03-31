@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Is Trevor On Parental Leave?</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/main.js"></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<head>
+<title>Is Trevor On Parental Leave?</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/main.js"></script>
+<script src="./assets/particles.js"></script>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
 <style type="text/css">
 * {
   margin: 0;
   padding: 0;
 }
-html, body, #container {
+html, body {
   height: 100%;
   width: 100%;
   background-color: #fe80fe;
+}
+#particles-js {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+#container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 @keyframes glow {
   0% {
@@ -58,10 +71,12 @@ html, body, #container {
   font-family: "Comic Sans MS", "Helvetica", cursive, sans-serif;
 }
 </style>
-  </head>
-  <body onload="draw();">
-      <div id="container">
-        <canvas id="canv"></canvas>
-      </div>
-  </body>
+</head>
+
+<body onload="draw();">
+    <div id="particles-js"></div>
+    <div id="container">
+      <canvas id="canv"></canvas>
+    </div>
+</body>
 </html>
