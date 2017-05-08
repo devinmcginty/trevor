@@ -1,4 +1,4 @@
-var TREVOR = 'nope (wfh)';
+var TREVOR = 'wfh';
 var font='100px Comic Sans MS, cursive, sans-serif';
 
 var shit = $('#shit');
